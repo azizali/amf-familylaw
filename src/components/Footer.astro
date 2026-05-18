@@ -1,0 +1,46 @@
+---
+import { contact, firmName } from '../data/site';
+---
+<footer class="bg-white text-slate-600 py-16 border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    
+    <div class="lg:col-span-2">
+      <div class="mb-4">
+        <a href="/" class="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
+          <div class="size-8 bg-slate-900 text-white rounded-md flex items-center justify-center text-sm">AMF</div>
+          <span class="text-sm leading-tight">{firmName}</span>
+        </a>
+      </div>
+      <p class="mb-6 font-light max-w-sm tracking-tight text-slate-500">
+        Dedicated to bringing clarity, objectivity, and specialized expertise to your family law appeal. 
+      </p>
+    </div>
+
+    <div>
+      <h4 class="text-slate-900 font-semibold mb-4 uppercase text-xs tracking-wider">Contact</h4>
+      <address class="not-italic flex flex-col space-y-2 font-light text-sm">
+        <a href={contact.phone.href} class="hover:text-slate-900 transition-colors">{contact.phone.display}</a>
+        <span class="mt-2 block pt-2 border-t border-slate-200">
+          {contact.address.lines[0]}<br/>
+          {contact.address.lines[1]}
+        </span>
+      </address>
+    </div>
+
+    <div>
+      <h4 class="text-slate-900 font-semibold mb-4 uppercase text-xs tracking-wider">Legal</h4>
+      <ul class="space-y-2 font-light text-sm">
+        <li><a href="#" class="hover:text-slate-900 transition-colors">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-slate-900 transition-colors">Terms of Service</a></li>
+        <li><a href="#" class="hover:text-slate-900 transition-colors">Disclaimer</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-slate-200 text-sm font-light flex flex-col md:flex-row justify-between items-center text-slate-500">
+    <p>&copy; {new Date().getFullYear()} {firmName}. All Rights Reserved.</p>
+    <p class="mt-2 md:mt-0 max-w-lg text-xs leading-relaxed text-center md:text-right">
+      The information on this website is for general information purposes only. Nothing on this site should be taken as legal advice for any individual case or situation.
+    </p>
+  </div>
+</footer>
