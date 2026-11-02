@@ -3,7 +3,6 @@ title: "Fathers’ Rights Attorney"
 description: "Chicago Firm Protects Fathers’ Rights A common misconception is that fathers have limited rights regarding their impact on their children. As a father you ha..."
 route: "/practice/child-custody-attorney/father-rights-attorney/"
 modified: "2026-11-01T06:26:45"
-draft: false
 ---
 
 ## Chicago Firm Protects Fathers’ Rights

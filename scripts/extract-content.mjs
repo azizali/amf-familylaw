@@ -26,18 +26,18 @@ const assetDir = join(root, 'src/assets/legacy');
 // before that date are genuine law-firm articles.
 const blogCutoff = '2015-01-01T00:00:00';
 
-// Pages that exist only as casino spam and contain no firm content.
-const spamPages = {
+// Pages left out of the output: casino spam with no firm content, and a WordPress test page.
+const excludedPages = {
   'stories/featured/2024/betprimeiro-vollstandiger-uberblick-uber-das-online-casino-fur-osterreichische-s':
     'casino spam',
   'unique-features-that-set-white-rabbit-casino-apart': 'casino spam',
+  test_test: 'WordPress test page',
 };
 
 // Pages kept in the Markdown output but not rendered as routes.
 const unrouted = {
   '': 'home page is served by src/pages/index.astro',
   blog: 'blog index is generated from the blog collection',
-  test_test: 'draft test page',
 };
 
 // Filler left on the home page after the firm's badges (not caught by the spam
@@ -243,8 +243,8 @@ async function main() {
       skipped.push({ url, reason: 'not returned by the WordPress pages API' });
       continue;
     }
-    if (spamPages[path]) {
-      skipped.push({ url, reason: spamPages[path] });
+    if (excludedPages[path]) {
+      skipped.push({ url, reason: excludedPages[path] });
       continue;
     }
 
@@ -261,7 +261,6 @@ async function main() {
       modified: wp.modified,
       markdown,
       description: excerptOf(markdown),
-      draft: path === 'test_test',
       routed: !(path in unrouted),
     });
   }
@@ -296,7 +295,6 @@ async function main() {
         `description: ${yamlString(page.description)}`,
         `route: ${yamlString(page.route)}`,
         `modified: ${yamlString(page.modified)}`,
-        `draft: ${page.draft}`,
         '---',
         '',
         localizeAssets(page.markdown, dirname(file)),

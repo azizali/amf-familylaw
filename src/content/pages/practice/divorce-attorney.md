@@ -3,7 +3,6 @@ title: "Divorce Attorney"
 description: "Chicago and North Shore Divorce Attorney Helping You Navigate the Divorce Process There is no such thing as a “typical” divorce. People have unique facts and..."
 route: "/practice/divorce-attorney/"
 modified: "2026-11-01T06:30:45"
-draft: false
 ---
 
 ## Chicago and North Shore Divorce Attorney

@@ -3,7 +3,6 @@ title: "Practice Areas"
 description: "The Law Offices of Annette M. Fernholz, P.C in Chicago provides experienced legal advice in these areas of family law practice: Appeals At times a divorce, p..."
 route: "/practice/"
 modified: "2026-11-01T06:25:11"
-draft: false
 ---
 
 The Law Offices of Annette M. Fernholz, P.C  in Chicago provides experienced legal advice in these areas of family law practice:

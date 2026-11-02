@@ -3,7 +3,6 @@ title: "Visitation and Parenting Time"
 description: "Chicago Parenting Time (formerly Visitation) Attorney Parents who can communicate and work together can develop a parenting time (formerly visitation) schedu..."
 route: "/practice/child-custody-attorney/visitation-and-parenting-time/"
 modified: "2026-10-21T18:02:34"
-draft: false
 ---
 
 ### Chicago Parenting Time (formerly Visitation) Attorney

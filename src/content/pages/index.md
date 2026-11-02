@@ -3,7 +3,6 @@ title: "home"
 description: "Diligent Attorney Efficiently Resolves Family Law Problems in Cook, Lake and DuPage Counties Many people have questions about their divorce or paternity case..."
 route: "/"
 modified: "2026-10-30T07:09:25"
-draft: false
 ---
 
 ## Diligent Attorney Efficiently Resolves Family Law Problems in Cook, Lake and DuPage Counties

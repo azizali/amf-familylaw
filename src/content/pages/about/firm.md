@@ -3,7 +3,6 @@ title: "Firm Profile"
 description: "Chicago Family Law Firm Provides Mediation, Collaborative and Litigation Services If you are getting divorced, having a parenting time (formerly visitation)..."
 route: "/about/firm/"
 modified: "2026-11-01T06:31:15"
-draft: false
 ---
 
 ### Chicago Family Law Firm Provides Mediation, Collaborative and Litigation Services

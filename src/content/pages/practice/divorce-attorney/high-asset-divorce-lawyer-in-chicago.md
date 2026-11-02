@@ -3,7 +3,6 @@ title: "High-Asset Divorce Lawyer"
 description: "Chicago and Northbrook HighAsset Divorce Lawyer Protecting Your Interests The Law Offices of Annette M. Fernholz, P.C. is dedicated to protecting the assets..."
 route: "/practice/divorce-attorney/high-asset-divorce-lawyer-in-chicago/"
 modified: "2026-10-21T18:02:18"
-draft: false
 ---
 
 ## Chicago and Northbrook High-Asset Divorce Lawyer Protecting Your Interests

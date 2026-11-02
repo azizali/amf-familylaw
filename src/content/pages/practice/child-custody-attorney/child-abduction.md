@@ -3,7 +3,6 @@ title: "Steps to take if your child is abducted and taken abroad"
 description: "The Hague Convention on the Civil Aspects of International Child Abduction provides an expeditious method to return a child internationally abducted from one..."
 route: "/practice/child-custody-attorney/child-abduction/"
 modified: "2026-10-21T18:03:40"
-draft: false
 ---
 
 The Hague Convention on the Civil Aspects of International Child Abduction provides an expeditious method to return a child internationally abducted from one parent by another between two countries that are member nations. Proceedings on the Convention take place in an expedited manner and can be held in state or federal court. The Convention only applies to children under the age of 16 who have been removed or retained from their country of habitual residence. The Treaty also applies to countries that are signatories the Treaty. To see if the country your child was taken to is a signatory to the Treaty, see an updated list of countries at www.travel.state.gov.

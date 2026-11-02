@@ -3,7 +3,6 @@ title: "Relocation and Removal"
 description: "Chicago Child Removal and Relocation Lawyer Americans are more transient than ever. If a residential parent has to relocate for a new job opportunity or a ne..."
 route: "/practice/child-custody-attorney/relocation-and-removal/"
 modified: "2026-10-21T18:01:25"
-draft: false
 ---
 
 ## Chicago Child Removal and Relocation Lawyer

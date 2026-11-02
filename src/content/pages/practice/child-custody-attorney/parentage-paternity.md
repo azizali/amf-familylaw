@@ -3,7 +3,6 @@ title: "Parentage & Paternity"
 description: "Chicago and Northbrook Paternity Attorney In paternity or parentage cases, allocation of parental responsibilities (formerly child custody) and parenting tim..."
 route: "/practice/child-custody-attorney/parentage-paternity/"
 modified: "2026-10-21T18:03:09"
-draft: false
 ---
 
 ## Chicago and Northbrook Paternity Attorney

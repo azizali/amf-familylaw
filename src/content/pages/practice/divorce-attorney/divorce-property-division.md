@@ -3,7 +3,6 @@ title: "Divorce Property Division"
 description: "Chicago Attorney Helps You Obtain a Fair Property Division Protect Your Assets and Investments Dividing property is often one of the most contentious aspects..."
 route: "/practice/divorce-attorney/divorce-property-division/"
 modified: "2026-10-21T18:02:01"
-draft: false
 ---
 
 ## Chicago Attorney Helps You Obtain a Fair Property Division

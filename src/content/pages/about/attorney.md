@@ -3,7 +3,6 @@ title: "Attorney Profile"
 description: "Annette Fernholz Chicago Family Law Attorney Skillfully Mediates, Collaborates and Litigates Annette Fernholz concentrates her practice in the resolution of..."
 route: "/about/attorney/"
 modified: "2026-11-01T06:25:56"
-draft: false
 ---
 
 ## Annette Fernholz

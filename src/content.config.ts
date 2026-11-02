@@ -9,7 +9,7 @@ const pages = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    route: z.string(),
+    route: z.string().optional(),
     modified: z.string(),
     draft: z.boolean().default(false),
   }),
@@ -20,7 +20,7 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    route: z.string(),
+    route: z.string().optional(),
     date: z.string(),
     modified: z.string(),
   }),

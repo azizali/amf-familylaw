@@ -3,7 +3,6 @@ title: "Child Custody Attorney"
 description: "Chicago and Northbrook Custody Lawyer Parental responsibility (formerly custody) and and parenting time (formerly visitation) are important issues in a divor..."
 route: "/practice/child-custody-attorney/"
 modified: "2026-11-01T06:28:05"
-draft: false
 ---
 
 ## Chicago and Northbrook Custody Lawyer

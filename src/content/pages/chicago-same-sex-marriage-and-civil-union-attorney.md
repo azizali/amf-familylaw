@@ -3,7 +3,6 @@ title: "Same-Sex Marriage and Civil Union Attorney"
 description: "Experienced in LGBT Divorce, Separation and Family Law Issues On June 1, 2014, the State of Illinois recognized samesex marriages. Previously, the Illinois R..."
 route: "/chicago-same-sex-marriage-and-civil-union-attorney/"
 modified: "2026-11-01T06:24:39"
-draft: false
 ---
 
 ## **Experienced in LGBT Divorce, Separation and Family Law Issues**

@@ -3,7 +3,6 @@ title: "FAQs"
 description: "FAQs regarding Divorce and other Family Law Matters What is an Allocation Judgment? In Illinois, there is no longer “custody.” Instead the court will determi..."
 route: "/faqs/"
 modified: "2026-11-01T06:27:18"
-draft: false
 ---
 
 ## FAQs regarding Divorce and other Family Law Matters

@@ -3,7 +3,6 @@ title: "Collaborative Law"
 description: "Chicago and North Shore Collaborative Lawyer Ending a Relationship with Less Conflict Collaborative law is a type of alternate dispute resolution such as med..."
 route: "/practice/collaborative-law/"
 modified: "2026-11-01T06:25:40"
-draft: false
 ---
 
 ## Chicago and North Shore Collaborative Lawyer

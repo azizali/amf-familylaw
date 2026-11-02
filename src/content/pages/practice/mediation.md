@@ -3,7 +3,6 @@ title: "Mediation"
 description: "Chicago Attorney Provides Mediation Services Mediation is a process for parties to settle their disputes with the assistance of a neutral, third party, known..."
 route: "/practice/mediation/"
 modified: "2026-11-01T06:31:35"
-draft: false
 ---
 
 ## ![15-mediation](../../../assets/legacy/15-mediation.jpg)Chicago Attorney Provides Mediation Services

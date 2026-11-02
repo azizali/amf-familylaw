@@ -3,7 +3,6 @@ title: "About"
 description: "Read more about: The Firm Annette M. Fernholz"
 route: "/about/"
 modified: "2026-11-01T06:26:15"
-draft: false
 ---
 
 Read more about:

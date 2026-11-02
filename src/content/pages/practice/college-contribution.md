@@ -3,7 +3,6 @@ title: "College Contribution"
 description: "Chicago College Contribution Attorney Who Pays for Your Child’s College Education? Illinois is one of about a dozen states that may order a divorced parent t..."
 route: "/practice/college-contribution/"
 modified: "2026-11-01T06:30:28"
-draft: false
 ---
 
 ## Chicago College Contribution Attorney

@@ -3,7 +3,6 @@ title: "Testimonials"
 description: "Annette helped me gain sole custody of my son. She helped me become a better parent. – Marius As my attorney Annette Fernholz has been in my corner for almos..."
 route: "/about/testimonials/"
 modified: "2026-11-01T06:29:10"
-draft: false
 ---
 
 > Annette helped me gain sole custody of my son. She helped me become a better parent.  

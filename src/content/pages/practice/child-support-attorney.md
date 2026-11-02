@@ -3,7 +3,6 @@ title: "Child Support Attorney"
 description: "Chicago Child Support Attorney Parents of minor children who are unmarried, separated or divorced may pay or receive child support. In Illinois the parent wh..."
 route: "/practice/child-support-attorney/"
 modified: "2026-11-01T06:28:44"
-draft: false
 ---
 
 ### Chicago Child Support Attorney

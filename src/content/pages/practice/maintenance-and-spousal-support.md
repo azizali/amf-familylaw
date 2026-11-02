@@ -3,7 +3,6 @@ title: "Maintenance and Spousal Support"
 description: "Northbrook Maintenance and Spousal Support Attorney Achieving a Fair Maintenance Award During a divorce one of your primary concerns is whether you will be a..."
 route: "/practice/maintenance-and-spousal-support/"
 modified: "2026-11-01T06:27:49"
-draft: false
 ---
 
 ## Northbrook Maintenance and Spousal Support Attorney
