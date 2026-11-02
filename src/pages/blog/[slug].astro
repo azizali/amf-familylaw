@@ -1,0 +1,32 @@
+---
+import { getCollection, render } from 'astro:content';
+import Header from '../../components/Header.astro';
+import { firmName } from '../../data/site';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const published = new Date(entry.data.date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<Layout title={`${entry.data.title} | ${firmName}`} description={entry.data.description || undefined}>
+	<Header />
+	<main class="max-w-3xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16">
+		<p class="text-sm text-slate-500 mb-2">
+			<a href="/blog/" class="hover:text-slate-900">Blog</a> · <time datetime={entry.data.date}>{published}</time>
+		</p>
+		<article class="prose-content">
+			<h1 class="font-serif text-4xl font-bold text-slate-900 mb-8 tracking-tight">{entry.data.title}</h1>
+			<Content />
+		</article>
+	</main>
+</Layout>

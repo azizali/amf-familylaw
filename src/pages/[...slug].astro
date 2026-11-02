@@ -1,0 +1,26 @@
+---
+import { getCollection, render } from 'astro:content';
+import Header from '../components/Header.astro';
+import { firmName } from '../data/site';
+import Layout from '../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  // The home page and blog index have their own routes, so their content is not rendered here.
+  const reserved = new Set(['index', 'blog']);
+  const pages = await getCollection('pages', ({ id, data }) => !data.draft && !reserved.has(id));
+  return pages.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<Layout title={`${entry.data.title} | ${firmName}`} description={entry.data.description || undefined}>
+	<Header />
+	<main class="max-w-3xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16">
+		<article class="prose-content">
+			<h1 class="font-serif text-4xl font-bold text-slate-900 mb-8 tracking-tight">{entry.data.title}</h1>
+			<Content />
+		</article>
+	</main>
+</Layout>

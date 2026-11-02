@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import Header from '../../components/Header.astro';
+import { firmName } from '../../data/site';
+import Layout from '../../layouts/Layout.astro';
+
+const posts = (await getCollection('blog')).sort((a, b) => b.data.date.localeCompare(a.data.date));
+---
+
+<Layout title={`Blog | ${firmName}`}>
+	<Header />
+	<main class="max-w-3xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16">
+		<h1 class="font-serif text-4xl font-bold text-slate-900 mb-10 tracking-tight">Blog</h1>
+		<ul class="space-y-8">
+			{
+				posts.map((post) => (
+					<li>
+						<time class="text-sm text-slate-500" datetime={post.data.date}>
+							{new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+						</time>
+						<h2 class="text-xl font-bold mt-1">
+							<a href={`/blog/${post.id}/`} class="text-slate-900 hover:underline">{post.data.title}</a>
+						</h2>
+						<p class="text-slate-600 mt-2">{post.data.description}</p>
+					</li>
+				))
+			}
+		</ul>
+	</main>
+</Layout>

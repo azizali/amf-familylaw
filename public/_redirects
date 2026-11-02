@@ -1,0 +1,8 @@
+# Legacy WordPress URLs that moved. Netlify applies these before serving the site.
+# Blog posts moved from the site root to /blog/<slug>/.
+/can-noncustodial-parents-receive-child-support-illinois-supreme-court-will-decide/ /blog/can-noncustodial-parents-receive-child-support-illinois-supreme-court-will-decide/ 301
+/what-do-i-do-if-my-child-is-abducted-and-taken-to-a-foreign-country/ /blog/what-do-i-do-if-my-child-is-abducted-and-taken-to-a-foreign-country/ 301
+/dont-delay-seeking-contribution-for-college-education-from-your-ex/ /blog/dont-delay-seeking-contribution-for-college-education-from-your-ex/ 301
+/is-a-prenuptial-agreement-necessary-before-marriage/ /blog/is-a-prenuptial-agreement-necessary-before-marriage/ 301
+/circuit-court-cook-county-updates-mediation-rules/ /blog/circuit-court-cook-county-updates-mediation-rules/ 301
+/new-spousal-support-maintenance-guidelines-adopted-illinois/ /blog/new-spousal-support-maintenance-guidelines-adopted-illinois/ 301
