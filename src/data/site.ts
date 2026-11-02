@@ -6,20 +6,20 @@ export const contact = {
     href: 'tel:+13126830308',
   },
   address: {
-    lines: ['211 West Wacker Dr, Suite 1100', 'Chicago, IL 60606'],
-    full: '211 West Wacker Dr, Suite 1100, Chicago, IL 60606',
+    lines: ['211 West Wacker Dr, Ste 1100', 'Chicago, IL 60606'],
+    full: '211 West Wacker Dr, ste 1100, Chicago, IL 60606',
   },
   mapsHref:
-    'https://www.google.com/maps/search/?api=1&query=211+West+Wacker+Dr%2C+Suite+1100%2C+Chicago%2C+IL+60606',
+    'https://www.google.com/maps/search/?api=1&query=Law%20Offices%20of%20Annette%20M.%20Fernholz%2C%20P.C.%2C%20211%20W%20Wacker%20Dr%20Ste%201100%2C%20Chicago%2C%20IL%2060606',
 };
 
-export const navLinks = [
-  { label: 'Practice Areas', href: '/practice/' },
-  { label: 'About', href: '/about/' },
-  { label: 'FAQs', href: '/faqs/' },
-  { label: 'Blog', href: '/blog/' },
-  { label: 'Contact', href: '/contact/' },
-];
+// Primary call to action. Every "start a conversation" button on the site reads from here
+// and links to the new-client intake form.
+export const cta = {
+  label: 'Connect with Annette to discuss your appeal',
+  short: 'Connect with Annette',
+  href: '/new-client/',
+};
 
 export const practiceLinks = [
   { label: 'Divorce', href: '/practice/divorce-attorney/' },
@@ -43,3 +43,46 @@ export const firmLinks = [
   { label: 'Blog', href: '/blog/' },
   { label: 'Privacy Policy', href: '/privacy/' },
 ];
+
+export const aboutLinks = [
+  { label: 'About the Firm', href: '/about/firm/' },
+  { label: 'Attorney Profile', href: '/about/attorney/' },
+  { label: 'Testimonials', href: '/about/testimonials/' },
+];
+
+export const navMenu = [
+  { label: 'Practice Areas', href: '/practice/', children: practiceLinks },
+  { label: 'About', href: '/about/', children: aboutLinks },
+  { label: 'FAQs', href: '/faqs/' },
+  { label: 'Blog', href: '/blog/' },
+  { label: 'Contact', href: '/contact/' },
+];
+
+// AI assistant. Flip `enabled` once the chatbot widget is embedded; every "Chat with our assistant"
+// button then appears. Buttons dispatch `amf:open-chat` on `window` for the widget to listen to.
+export const chat = {
+  enabled: false,
+  label: 'Chat with our assistant',
+};
+
+export const offices = [
+  {
+    name: 'Downtown Chicago',
+    note: '',
+    lines: ['211 W Wacker Dr, Ste 1100', 'Chicago, IL 60606'],
+    // Business name first so Google resolves the listing instead of dropping a plain pin.
+    query: 'Law Offices of Annette M. Fernholz, P.C., 211 W Wacker Dr Ste 1100, Chicago, IL 60606',
+    // Optional: paste the src from Google Maps > Share > Embed a map to pin the exact listing.
+    embedSrc: '',
+  },
+  {
+    name: 'Northbrook',
+    note: 'By appointment only',
+    lines: ['707 Skokie Blvd', 'Northbrook, IL 60062'],
+    query: '707 Skokie Blvd, Northbrook, IL 60062',
+    embedSrc: '',
+  },
+];
+
+export const mapEmbedSrc = (query: string) => `https://www.google.com/maps?q=${encodeURIComponent(query)}&output=embed`;
+export const mapLinkHref = (query: string) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;

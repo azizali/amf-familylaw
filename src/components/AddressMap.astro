@@ -1,0 +1,11 @@
+---
+import { mapEmbedSrc, mapLinkHref } from '../data/site';
+export interface Props { query: string; title: string; embedSrc?: string; class?: string; }
+const { query, title, embedSrc, class: cls = '' } = Astro.props;
+---
+<div class:list={['overflow-hidden rounded-2xl border border-line bg-page', cls]}>
+  <iframe src={embedSrc || mapEmbedSrc(query)} title={`Map of ${title}`} loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="block h-48 w-full border-0 sm:h-56"></iframe>
+  <a href={mapLinkHref(query)} class="flex min-h-11 items-center justify-between px-4 py-2 text-sm font-semibold text-accent-text hover:underline">
+    Get directions <span aria-hidden="true">→</span>
+  </a>
+</div>

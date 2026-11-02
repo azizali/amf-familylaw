@@ -1,30 +1,40 @@
 ---
 import { getCollection } from 'astro:content';
+import CtaCard from '../../components/CtaCard.astro';
 import Header from '../../components/Header.astro';
+import PageHeader from '../../components/PageHeader.astro';
 import { firmName } from '../../data/site';
 import Layout from '../../layouts/Layout.astro';
 
 const posts = (await getCollection('blog')).sort((a, b) => b.data.date.localeCompare(a.data.date));
+const fmt = (d: string) => new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const [first, ...rest] = posts;
 ---
 
 <Layout title={`Blog | ${firmName}`}>
 	<Header />
-	<main class="max-w-3xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16">
-		<h1 class="font-serif text-4xl font-bold text-slate-900 mb-10 tracking-tight">Blog</h1>
-		<ul class="space-y-8">
-			{
-				posts.map((post) => (
-					<li>
-						<time class="text-sm text-slate-500" datetime={post.data.date}>
-							{new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-						</time>
-						<h2 class="text-xl font-bold mt-1">
-							<a href={`/blog/${post.id}/`} class="text-slate-900 hover:underline">{post.data.title}</a>
-						</h2>
-						<p class="text-slate-600 mt-2">{post.data.description}</p>
-					</li>
-				))
-			}
-		</ul>
+	<main id="main" class="wrap py-8 sm:py-10">
+		<PageHeader title="Blog" crumbs={[{ label: 'Home', href: '/' }, { label: 'Blog' }]} />
+		<div class="mt-6 grid gap-3 md:grid-cols-2">
+			<a href={`/blog/${first.id}/`} class="on-deep r group flex flex-col justify-between gap-10 bg-deep p-6 text-on-deep transition-transform duration-300 hover:-translate-y-1 sm:p-8 md:col-span-2">
+				<time class="tab-label text-hi" datetime={first.data.date}>{fmt(first.data.date)}</time>
+				<div>
+					<h2 class="max-w-2xl text-2xl leading-snug sm:text-3xl">{first.data.title}</h2>
+					<p class="mt-3 max-w-2xl text-sm leading-relaxed text-deep-muted sm:text-base">{first.data.description}</p>
+					<span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-hi">Read article <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span></span>
+				</div>
+			</a>
+			{rest.map((post) => (
+				<a href={`/blog/${post.id}/`} class="r group flex flex-col justify-between gap-8 border border-line bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent">
+					<time class="tab-label text-accent-text" datetime={post.data.date}>{fmt(post.data.date)}</time>
+					<div>
+						<h2 class="text-xl leading-snug">{post.data.title}</h2>
+						<p class="mt-2 text-sm leading-relaxed text-muted">{post.data.description}</p>
+						<span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-accent-text">Read article <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span></span>
+					</div>
+				</a>
+			))}
+		</div>
+		<div class="mt-6"><CtaCard /></div>
 	</main>
 </Layout>

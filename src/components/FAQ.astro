@@ -1,76 +1,52 @@
 ---
+import { cta } from '../data/site';
 ---
-<section id="faq" class="relative isolate overflow-hidden py-12 sm:py-16 lg:py-24 bg-sky-50/70">
-  <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_16%_18%,rgba(14,165,233,0.16),transparent_34%),radial-gradient(circle_at_84%_14%,rgba(15,23,42,0.08),transparent_28%),linear-gradient(to_bottom,rgba(255,255,255,0.84),rgba(241,245,249,0.92))]"></div>
-  <svg class="pointer-events-none absolute inset-0 -z-10 h-full w-full stroke-slate-900/6 mask-[linear-gradient(to_bottom,white,transparent)]" aria-hidden="true">
-    <defs>
-      <pattern id="faq-grid" width="72" height="72" x="50%" y="-1" patternUnits="userSpaceOnUse">
-        <path d="M.5 72V.5H72" fill="none" />
-      </pattern>
-    </defs>
-    <rect width="100%" height="100%" stroke-width="0" fill="url(#faq-grid)" />
-  </svg>
-
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mb-12 space-y-4 sm:mb-16 lg:mb-24">
-      <div class="text-sky-800 text-sm font-medium uppercase tracking-widest">FAQ</div>
-      <h2 class="text-3xl font-bold md:text-4xl text-slate-900 tracking-tight">Questions I Hear Often</h2>
-      <p class="mt-4 max-w-2xl text-lg text-slate-600 font-light leading-relaxed">
+<section id="faq" class="py-16 sm:py-20">
+  <div class="wrap grid gap-8 lg:grid-cols-[1fr_1.7fr] lg:gap-12">
+    <div data-reveal class="lg:sticky lg:top-24 lg:self-start">
+      <p class="chip">FAQ</p>
+      <h2 class="mt-4 text-[clamp(1.6rem,3vw,2.25rem)] leading-tight">Questions I Hear Often</h2>
+      <p class="mt-3 text-muted">
         Some appeals move quickly. Appellate rules are technical. These answers cover a few of the most common questions clients ask when they are deciding what to do next.
       </p>
+      <div class="r mt-6 bg-deep p-5 text-on-deep">
+        <p class="tab-label text-hi">Strict deadlines. Careful review.</p>
+        <p class="mt-2 font-serif text-lg leading-snug">If you are on trial, make sure you have a court reporter preserve the record.</p>
+      </div>
+      <a href={cta.href} class="btn btn-accent mt-4 w-full sm:w-auto">{cta.label}</a>
     </div>
-
-    <div class="mx-auto max-w-4xl">
-      <div class="mb-6 rounded-2xl border border-slate-200 bg-white/85 p-5 shadow-sm backdrop-blur-sm sm:p-6">
-        <div class="inline-flex rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-sky-800">
-          Strict deadlines. Careful review.
-        </div>
-        <p class="mt-4 max-w-2xl text-base sm:text-lg font-light leading-relaxed text-slate-600">
-          If you are on trial, make sure you have a court reporter preserve the record.
-        </p>
-      </div>
-
-      <div class="space-y-4">
-        <details class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-200 open:shadow-md">
-          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-5 text-left text-lg font-semibold text-slate-900 transition-colors hover:text-sky-800 sm:px-6">
-            <span>Can I appeal just because I am unhappy with the judge's decision?</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5 shrink-0 text-slate-500 transition-transform duration-200 group-open:rotate-180"><path d="m6 9 6 6 6-6"></path></svg>
+    <div data-reveal style="--i:1" class="space-y-2.5">
+        <details class="faq r border border-line bg-card">
+          <summary class="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-serif text-lg leading-snug">
+            <span>Can I appeal just because I am unhappy with the judge's decision?</span><span class="faq-icon shrink-0 text-accent-text" aria-hidden="true"></span>
           </summary>
-          <div class="px-5 pb-5 pt-0 text-base font-light leading-relaxed text-slate-600 sm:px-6">
-            No. An appeal is not a "do-over" or a second chance to present new evidence. To win an appeal, we must prove that the trial judge made a specific legal error, improperly weighed the evidence, misapplied the law, or erred in a way that significantly impacted the outcome of your case, which is contrary to the law.
-          </div>
+          <p class="max-w-[40rem] px-5 pb-5 text-sm leading-relaxed text-muted sm:text-base">No. An appeal is not a "do-over" or a second chance to present new evidence. To win an appeal, we must prove that the trial judge made a specific legal error, improperly weighed the evidence, misapplied the law, or erred in a way that significantly impacted the outcome of your case, which is contrary to the law.</p>
         </details>
-
-        <details class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-200 open:shadow-md">
-          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-5 text-left text-lg font-semibold text-slate-900 transition-colors hover:text-sky-800 sm:px-6">
-            <span>How long do I have to file an appeal?</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5 shrink-0 text-slate-500 transition-transform duration-200 group-open:rotate-180"><path d="m6 9 6 6 6-6"></path></svg>
+        <details class="faq r border border-line bg-card">
+          <summary class="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-serif text-lg leading-snug">
+            <span>How long do I have to file an appeal?</span><span class="faq-icon shrink-0 text-accent-text" aria-hidden="true"></span>
           </summary>
-          <div class="px-5 pb-5 pt-0 text-base font-light leading-relaxed text-slate-600 sm:px-6">
-            The window to file a Notice of Appeal is strictly limited, often 30 days or less from the date the judgment is entered, depending on the Supreme Court Rule giving a reviewing court jurisdiction. If you miss this deadline, you could forfeit your right to appeal forever. It is critical to consult an appellate attorney immediately after an adverse ruling.
-          </div>
+          <p class="max-w-[40rem] px-5 pb-5 text-sm leading-relaxed text-muted sm:text-base">The window to file a Notice of Appeal is strictly limited, often 30 days or less from the date the judgment is entered, depending on the Supreme Court Rule giving a reviewing court jurisdiction. If you miss this deadline, you could forfeit your right to appeal forever. It is critical to consult an appellate attorney immediately after an adverse ruling.</p>
         </details>
-
-        <details class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-200 open:shadow-md">
-          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-5 text-left text-lg font-semibold text-slate-900 transition-colors hover:text-sky-800 sm:px-6">
-            <span>My ex-spouse is appealing a judgment I won. Do I need an appellate attorney?</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5 shrink-0 text-slate-500 transition-transform duration-200 group-open:rotate-180"><path d="m6 9 6 6 6-6"></path></svg>
+        <details class="faq r border border-line bg-card">
+          <summary class="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-serif text-lg leading-snug">
+            <span>My ex-spouse is appealing a judgment I won. Do I need an appellate attorney?</span><span class="faq-icon shrink-0 text-accent-text" aria-hidden="true"></span>
           </summary>
-          <div class="px-5 pb-5 pt-0 text-base font-light leading-relaxed text-slate-600 sm:px-6">
-            Defending a judgment on appeal requires the same specialized legal research and brief-writing skills as filing one. You need an advocate who understands appellate procedure to dismantle the appellant's arguments and protect your hard-won victory.
-          </div>
+          <p class="max-w-[40rem] px-5 pb-5 text-sm leading-relaxed text-muted sm:text-base">Defending a judgment on appeal requires the same specialized legal research and brief-writing skills as filing one. You need an advocate who understands appellate procedure to dismantle the appellant's arguments and protect your hard-won victory.</p>
         </details>
-
-        <details class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-200 open:shadow-md">
-          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-5 text-left text-lg font-semibold text-slate-900 transition-colors hover:text-sky-800 sm:px-6">
-            <span>Why shouldn't I just use my trial lawyer for the appeal?</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5 shrink-0 text-slate-500 transition-transform duration-200 group-open:rotate-180"><path d="m6 9 6 6 6-6"></path></svg>
+        <details class="faq r border border-line bg-card">
+          <summary class="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-serif text-lg leading-snug">
+            <span>Why shouldn't I just use my trial lawyer for the appeal?</span><span class="faq-icon shrink-0 text-accent-text" aria-hidden="true"></span>
           </summary>
-          <div class="px-5 pb-5 pt-0 text-base font-light leading-relaxed text-slate-600 sm:px-6">
-            Trial attorneys excel at presenting evidence, questioning witnesses, and arguing before a judge. Appellate attorneys specialize in legal research, identifying procedural flaws, and writing, and if necessary, arguing before a panel of appellate judges. A fresh, objective perspective is often exactly what is needed to present the trial court errors in a persuasive manner. 
-          </div>
+          <p class="max-w-[40rem] px-5 pb-5 text-sm leading-relaxed text-muted sm:text-base">Trial attorneys excel at presenting evidence, questioning witnesses, and arguing before a judge. Appellate attorneys specialize in legal research, identifying procedural flaws, and writing, and if necessary, arguing before a panel of appellate judges. A fresh, objective perspective is often exactly what is needed to present the trial court errors in a persuasive manner.</p>
         </details>
-      </div>
     </div>
   </div>
 </section>
+<style>
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq-icon { position: relative; width: 1rem; height: 1rem; }
+  .faq-icon::before, .faq-icon::after { content: ""; position: absolute; left: 0; top: 50%; width: 100%; height: 1.5px; background: currentColor; transition: transform 0.3s cubic-bezier(0.16,1,0.3,1); }
+  .faq-icon::after { transform: rotate(90deg); }
+  .faq[open] .faq-icon::after { transform: rotate(0); }
+</style>

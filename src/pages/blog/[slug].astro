@@ -1,6 +1,8 @@
 ---
 import { getCollection, render } from 'astro:content';
+import CtaCard from '../../components/CtaCard.astro';
 import Header from '../../components/Header.astro';
+import PageHeader from '../../components/PageHeader.astro';
 import { firmName } from '../../data/site';
 import Layout from '../../layouts/Layout.astro';
 
@@ -11,22 +13,32 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const published = new Date(entry.data.date).toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-});
+const published = new Date(entry.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const others = (await getCollection('blog'))
+  .filter((p) => p.id !== entry.id)
+  .sort((a, b) => b.data.date.localeCompare(a.data.date))
+  .slice(0, 3);
 ---
 
 <Layout title={`${entry.data.title} | ${firmName}`} description={entry.data.description || undefined}>
 	<Header />
-	<main class="max-w-3xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16">
-		<p class="text-sm text-slate-500 mb-2">
-			<a href="/blog/" class="hover:text-slate-900">Blog</a> · <time datetime={entry.data.date}>{published}</time>
-		</p>
-		<article class="prose-content">
-			<h1 class="font-serif text-4xl font-bold text-slate-900 mb-8 tracking-tight">{entry.data.title}</h1>
-			<Content />
-		</article>
+	<main id="main" class="wrap py-8 sm:py-10">
+		<PageHeader title={entry.data.title} meta={`Published ${published}`} crumbs={[{ label: 'Home', href: '/' }, { label: 'Blog', href: '/blog/' }, { label: 'Article' }]} />
+		<div class="mt-6 grid gap-6 lg:grid-cols-[1fr_20rem] lg:items-start">
+			<article class="prose-content r border border-line bg-card p-6 sm:p-10" style="max-width:none">
+				<div style="max-width:68ch"><Content /></div>
+			</article>
+			<div class="space-y-4 lg:sticky lg:top-24">
+				<CtaCard />
+				<nav class="r border border-line bg-card p-5" aria-label="More articles">
+					<h2 class="tab-label text-accent-text">More from the Blog</h2>
+					<ul class="mt-3 space-y-1 text-sm">
+						{others.map((p) => (
+							<li><a href={`/blog/${p.id}/`} class="block rounded-lg px-2.5 py-2 leading-snug transition-colors hover:bg-page">{p.data.title}</a></li>
+						))}
+					</ul>
+				</nav>
+			</div>
+		</div>
 	</main>
 </Layout>

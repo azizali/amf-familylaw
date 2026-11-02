@@ -1,6 +1,7 @@
 ---
 import About from '../components/About.astro';
 import FAQ from '../components/FAQ.astro';
+import GoogleReviews from '../components/GoogleReviews.astro';
 import GetStarted from '../components/GetStarted.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
@@ -11,10 +12,11 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title={`${firmName} | Premier Appellate Family Law Attorney`}>
 	<Header />
-	<main>
+	<main id="main">
 		<Hero />
 		<Services />
 		<About />
+		<GoogleReviews />
 		<FAQ />
 		<GetStarted />
 	</main>

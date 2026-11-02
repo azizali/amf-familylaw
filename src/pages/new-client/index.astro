@@ -1,0 +1,63 @@
+---
+import Header from '../../components/Header.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import AddressMap from '../../components/AddressMap.astro';
+import ChatButton from '../../components/ChatButton.astro';
+import { firmName, mapLinkHref, offices } from '../../data/site';
+import Layout from '../../layouts/Layout.astro';
+
+const field = 'mt-1.5 w-full rounded-xl border border-line bg-page px-4 py-3 text-base text-fg placeholder:text-muted/70 transition-colors focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30';
+const label = 'block text-sm font-semibold';
+---
+
+<Layout title={`New Client Inquiry | ${firmName}`} description="Connect with Annette to discuss your appeal. All communications are strictly confidential.">
+	<Header />
+	<main id="main" class="wrap py-8 sm:py-10">
+		<PageHeader title="Connect with Annette to Discuss Your Appeal" crumbs={[{ label: 'Home', href: '/' }, { label: 'New Client Inquiry' }]} />
+		<div class="mt-6 grid gap-6 lg:grid-cols-[1fr_20rem] lg:items-start">
+			<form name="new-client" method="POST" action="/new-client/thanks/" data-netlify="true" netlify-honeypot="bot-field" class="r space-y-5 border border-line bg-card p-6 sm:p-10">
+				<input type="hidden" name="form-name" value="new-client" />
+				<p class="hidden"><label>Leave this empty: <input name="bot-field" /></label></p>
+
+				<p class="text-muted">Appellate deadlines are strict and unforgiving. Tell me a little about your case and my office will contact you. All communications are strictly confidential.</p>
+
+				<div class="grid gap-5 sm:grid-cols-2">
+					<div><label for="name" class={label}>Full name</label><input id="name" name="name" required autocomplete="name" class={field} /></div>
+					<div><label for="phone" class={label}>Phone</label><input id="phone" name="phone" type="tel" required autocomplete="tel" class={field} /></div>
+				</div>
+				<div><label for="email" class={label}>Email</label><input id="email" name="email" type="email" required autocomplete="email" class={field} /></div>
+
+				<div class="grid gap-5 sm:grid-cols-2">
+					<div>
+						<label for="matter" class={label}>What do you need help with?</label>
+						<select id="matter" name="matter" required class={field}>
+							<option value="">Select one</option>
+							<option>Appealing an unfavorable judgment</option>
+							<option>Defending a trial victory on appeal</option>
+							<option>Advising as trial counsel</option>
+							<option>Divorce, custody, or relocation</option>
+							<option>Property division</option>
+							<option>Maintenance or child support</option>
+							<option>Something else</option>
+						</select>
+					</div>
+					<div><label for="ruling-date" class={label}>Date of the court's ruling, if any</label><input id="ruling-date" name="ruling-date" type="date" class={field} /></div>
+				</div>
+
+				<div><label for="details" class={label}>Briefly describe your situation</label><textarea id="details" name="details" rows="6" required class={field}></textarea></div>
+
+				<div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+					<button type="submit" class="btn btn-accent">Send my inquiry</button>
+					<ChatButton variant="line-deep" class="!text-fg !border-line" />
+				</div>
+			</form>
+
+			<aside class="r border border-line bg-card p-6 text-sm leading-relaxed text-muted">
+				<h2 class="font-serif text-lg text-fg">Office</h2>
+				<address class="mt-2 not-italic"><a href={mapLinkHref(offices[0].query)} class="hover:text-accent-text hover:underline">{offices[0].lines[0]}<br />{offices[0].lines[1]}</a></address>
+				<AddressMap query={offices[0].query} embedSrc={offices[0].embedSrc} title={offices[0].name} class="mt-4" />
+				<p class="mt-4">Submitting this form does not create an attorney-client relationship. Please do not include privileged details until you have spoken with my office.</p>
+			</aside>
+		</div>
+	</main>
+</Layout>

@@ -1,7 +1,10 @@
 ---
 import { getCollection, render } from 'astro:content';
+import AddressMap from '../components/AddressMap.astro';
+import CtaCard from '../components/CtaCard.astro';
 import Header from '../components/Header.astro';
-import { firmName } from '../data/site';
+import PageHeader from '../components/PageHeader.astro';
+import { firmName, mapLinkHref, offices, practiceLinks } from '../data/site';
 import Layout from '../layouts/Layout.astro';
 
 export async function getStaticPaths() {
@@ -13,14 +16,42 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+const path = `/${entry.id}/`;
+const section = entry.id.startsWith('practice') || entry.id.startsWith('chicago-same-sex') ? 'Practice Areas' : entry.id.startsWith('about') ? 'About' : null;
+const sectionHref = section === 'Practice Areas' ? '/practice/' : section === 'About' ? '/about/' : undefined;
+const crumbs = [{ label: 'Home', href: '/' }, ...(section && sectionHref !== path ? [{ label: section, href: sectionHref }] : []), { label: entry.data.title }];
 ---
 
 <Layout title={`${entry.data.title} | ${firmName}`} description={entry.data.description || undefined}>
 	<Header />
-	<main class="max-w-3xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16">
-		<article class="prose-content">
-			<h1 class="font-serif text-4xl font-bold text-slate-900 mb-8 tracking-tight">{entry.data.title}</h1>
-			<Content />
-		</article>
+	<main id="main" class="wrap py-8 sm:py-10">
+		<PageHeader title={entry.data.title} crumbs={crumbs} />
+		<div class="mt-6 grid gap-6 lg:grid-cols-[1fr_20rem] lg:items-start">
+			<article class="prose-content r border border-line bg-card p-6 sm:p-10" style="max-width:none">
+				<div style="max-width:68ch"><Content /></div>
+				{entry.id === 'contact' && (
+					<div class="mt-10 grid gap-5 sm:grid-cols-2" style="max-width:none">
+						{offices.map((o) => (
+							<div>
+								<h2 class="!mt-0 !mb-1 font-serif text-xl">{o.name}</h2>
+								<p class="mb-3 text-sm text-muted sm:min-h-[2.75rem]"><a href={mapLinkHref(o.query)} class="hover:text-accent-text hover:underline">{o.lines.join(', ')}</a>{o.note && <><br />{o.note}</>}</p>
+								<AddressMap query={o.query} embedSrc={o.embedSrc} title={o.name} />
+							</div>
+						))}
+					</div>
+				)}
+			</article>
+			<div class="space-y-4 lg:sticky lg:top-24">
+				<CtaCard />
+				<nav class="r border border-line bg-card p-5" aria-label="Practice areas">
+					<h2 class="tab-label text-accent-text">Practice Areas</h2>
+					<ul class="mt-3 space-y-0.5 text-sm">
+						{practiceLinks.map((l) => (
+							<li><a href={l.href} aria-current={l.href === path ? 'page' : undefined} class:list={['block rounded-lg px-2.5 py-2 transition-colors hover:bg-page', l.href === path && 'bg-page font-semibold text-accent-text']}>{l.label}</a></li>
+						))}
+					</ul>
+				</nav>
+			</div>
+		</div>
 	</main>
 </Layout>

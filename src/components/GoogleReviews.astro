@@ -1,0 +1,83 @@
+---
+import { reviews, reviewSummary } from '../data/reviews';
+
+const palette = ['#1a73e8', '#d93025', '#188038', '#e37400', '#9334e6', '#00796b'];
+const initial = (n: string) => n.trim().charAt(0).toUpperCase();
+const color = (n: string) => palette[[...n].reduce((a, c) => a + c.charCodeAt(0), 0) % palette.length];
+const long = (r: { text: string; truncated?: boolean }) => r.truncated || r.text.length > 240;
+const g = `<svg viewBox="0 0 48 48" class="size-full" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>`;
+const star = 'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z';
+---
+{reviews.length > 0 && (
+  <section id="reviews" class="grs py-16 sm:py-20" aria-label="Google reviews">
+    <div class="wrap">
+      <div>
+        <div>
+          <p class="chip">Client Reviews</p>
+          <h2 class="mt-4 text-[clamp(1.6rem,3vw,2.25rem)] leading-tight">What Clients Say</h2>
+        </div>
+      </div>
+
+      <!-- Shared Google-look container -->
+      <div class="gr mt-8">
+
+        <!-- A: summary + 2-column grid -->
+        <div class="gr-a grid gap-4 lg:grid-cols-[15rem_1fr]">
+          <div class="gr-card flex flex-col items-start gap-4 p-6">
+            <span class="size-10" set:html={g}></span>
+            <div>
+              <p class="gr-title">Google reviews</p>
+              <p class="gr-sub">What clients say about Law Offices of Annette M. Fernholz, P.C.</p>
+            </div>
+            <a href={reviewSummary.href} target="_blank" rel="noopener" class="gr-btn mt-auto">See all reviews</a>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            {reviews.map((r) => (
+              <article class="gr-card p-5">
+                <header class="flex items-center gap-3">
+                  <span class="gr-av" style={`background:${color(r.name)}`}>{initial(r.name)}</span>
+                  <div class="min-w-0 flex-1"><p class="gr-name">{r.name}</p>
+                    {r.rating && <svg viewBox="0 0 120 24" class="gr-stars" role="img" aria-label={`${r.rating} out of 5 stars`}>{[0,1,2,3,4].map((n) => <path d={star} transform={`translate(${n * 24} 0)`} fill={n < r.rating! ? '#fbbc04' : '#dadce0'} />)}</svg>}
+                  </div>
+                  <span class="size-5 shrink-0" set:html={g}></span>
+                </header>
+                <p class:list={['gr-text mt-3', long(r) && 'gr-clamp']}>{r.text}</p>
+                {long(r) && (r.truncated
+                  ? <a href={reviewSummary.href} target="_blank" rel="noopener" class="gr-more">More</a>
+                  : <button type="button" class="gr-more" data-gr-more>More</button>)}
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+)}
+
+<style is:global>
+  .gr {
+    --g-fg: #202124; --g-sub: #5f6368; --g-line: #dadce0; --g-blue: #1a73e8;
+    font-family: Roboto, Arial, "Helvetica Neue", sans-serif; color: var(--g-fg);
+  }
+  .gr-card { background: #fff; border: 1px solid var(--g-line); border-radius: 12px; }
+  .gr-title { font-size: 1.125rem; font-weight: 500; line-height: 1.3; }
+  .gr-sub { margin-top: 0.25rem; font-size: 0.875rem; line-height: 1.4; color: var(--g-sub); }
+  .gr-name { font-size: 0.875rem; font-weight: 500; line-height: 1.3; }
+  .gr-text { font-size: 0.875rem; line-height: 1.55; color: var(--g-fg); }
+  .gr-clamp { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5; overflow: hidden; }
+  .gr-text.is-open { -webkit-line-clamp: unset; display: block; }
+  .gr-stars { margin-top: 2px; height: 0.9rem; width: 4.75rem; }
+  .gr-more, .gr-link { color: var(--g-blue); font-size: 0.875rem; font-weight: 500; background: none; border: 0; padding: 0.5rem 0 0; cursor: pointer; }
+  .gr-more:hover, .gr-link:hover { text-decoration: underline; }
+  .gr-btn { display: inline-flex; min-height: 2.25rem; align-items: center; border: 1px solid var(--g-line); border-radius: 999px; padding: 0 1rem; font-size: 0.875rem; font-weight: 500; color: var(--g-blue); }
+  .gr-btn:hover { background: #f6fafe; border-color: #d2e3fc; }
+  .gr-av { display: flex; width: 2.5rem; height: 2.5rem; flex: none; align-items: center; justify-content: center; border-radius: 999px; color: #fff; font-size: 1.1rem; }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.grs [data-gr-more]').forEach((b) => b.addEventListener('click', () => {
+    const t = b.previousElementSibling as HTMLElement;
+    const open = t.classList.toggle('is-open');
+    b.textContent = open ? 'Less' : 'More';
+  }));
+</script>

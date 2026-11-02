@@ -1,145 +1,65 @@
 ---
+import { cta } from '../data/site';
 const services = [
   {
     tag: 'Trial Errors',
     title: 'Appealing Unfavorable Judgments',
     description:
       'If the trial judge misapplied the law or abused their discretion, I conduct a microscopic review of your trial record to find reversible errors and craft persuasive appellate briefs to fight for a reversal.',
-    icon: 'gavel',
   },
   {
     tag: 'Trial Success',
     title: 'Defending Your Trial Victory',
     description:
       "When the opposing party appeals a judgment that went in your favor, I develop the arguments to confirm the trial court's decision, dismantling the appellant's arguments so your victory stands.",
-    icon: 'shield',
   },
   {
     tag: 'Consulting',
     title: 'Advising Trial Counsel',
     description:
       'I am consulted by trial attorneys before a final judgment is entered, ensuring the record is properly preserved for a future appeal, and documenting when the trial court makes a critical procedural error.',
-    icon: 'brief',
   },
   {
     tag: 'Family Law',
     title: 'High-Stakes Parenting & Relocation Issues',
     description:
       'Navigating and appealing decisions where the court improperly evaluated the best interests of the child.',
-    icon: 'family',
   },
   {
     tag: 'Financials',
     title: 'Complex Property Division',
     description:
       'Challenging mischaracterizations of nonmarital versus marital property, erroneous business valuations, and the improper ruling regarding the tracing of financial assets.',
-    icon: 'chart',
   },
   {
     tag: 'Support',
     title: 'Maintenance & Child Support',
     description:
       'Appealing judgments where the court failed to properly calculate income, ignored statutory factors, or awarded unjustifiably high or low support.',
-    icon: 'scales',
   },
 ];
 ---
-<section id="services" class="relative isolate overflow-hidden py-12 sm:py-16 lg:py-24 bg-sky-50/70">
-  <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_22%,rgba(14,165,233,0.14),transparent_35%),radial-gradient(circle_at_82%_10%,rgba(15,23,42,0.08),transparent_30%),linear-gradient(to_bottom,rgba(255,255,255,0.84),rgba(241,245,249,0.92))]"></div>
-  <svg class="pointer-events-none absolute inset-0 -z-10 h-full w-full stroke-slate-900/6 mask-[linear-gradient(to_bottom,white,transparent)]" aria-hidden="true">
-    <defs>
-      <pattern id="services-grid" width="72" height="72" x="50%" y="-1" patternUnits="userSpaceOnUse">
-        <path d="M.5 72V.5H72" fill="none" />
-      </pattern>
-    </defs>
-    <rect width="100%" height="100%" stroke-width="0" fill="url(#services-grid)" />
-  </svg>
-
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mb-12 space-y-4 sm:mb-16 lg:mb-24">
-      <div class="text-sky-800 text-sm font-medium uppercase tracking-widest">My Services</div>
-      <h2 class="text-3xl font-bold md:text-4xl text-slate-900 tracking-tight">What I Can Do For You</h2>
-      <p class="mt-4 max-w-2xl text-lg text-slate-600 font-light leading-relaxed">
+<section id="services" class="py-16 sm:py-20">
+  <div class="wrap">
+    <div class="max-w-2xl">
+      <p class="chip">My Services</p>
+      <h2 class="mt-4 text-[clamp(1.6rem,3vw,2.25rem)] leading-tight">What I Can Do For You</h2>
+      <p class="mt-3 text-muted">
         Appellate law is a distinct discipline. Whether you are seeking to overturn an unfair judgment or defending a hard-won victory, I provide the specialized expertise needed at the appellate level.
       </p>
     </div>
 
-    <div class="relative pl-0 md:pl-6">
-      <div class="absolute left-1 top-0 hidden h-full w-px bg-linear-to-b from-sky-300 via-sky-200 to-transparent md:block" aria-hidden="true"></div>
-
-      <div class="space-y-3">
-        {services.map((service, index) => (
-          <article class="group relative grid grid-cols-1 gap-5 border-b border-sky-100/80 py-8 last:border-b-0 md:grid-cols-[1fr_1.2fr] md:items-start md:gap-8 md:py-9">
-
-            <div>
-              <div class="mb-3 inline-flex rounded-full border border-slate-200 bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-slate-600">
-                {service.tag}
-              </div>
-              <h3 class="text-2xl font-semibold leading-tight text-slate-900 sm:text-[1.7rem]">{service.title}</h3>
-            </div>
-
-            <div>
-              <div class="flex items-start gap-4">
-                <div class="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-sky-200 bg-sky-50 text-sky-700">
-                  {service.icon === 'gavel' && (
-                    <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M14 7l3 3" />
-                      <path d="M12 9l3 3" />
-                      <path d="M3 21l6-6" />
-                      <path d="M12 9l-6 6 3 3 6-6" />
-                      <path d="M15 6l2-2 3 3-2 2" />
-                      <path d="M11 21h10" />
-                    </svg>
-                  )}
-                  {service.icon === 'shield' && (
-                    <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M12 3l7 3v6c0 4.5-2.8 7.7-7 9-4.2-1.3-7-4.5-7-9V6l7-3z" />
-                      <path d="M9 12l2 2 4-4" />
-                    </svg>
-                  )}
-                  {service.icon === 'brief' && (
-                    <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <rect x="3" y="7" width="18" height="13" rx="2" />
-                      <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                      <path d="M3 12h18" />
-                    </svg>
-                  )}
-                  {service.icon === 'family' && (
-                    <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <circle cx="7" cy="8" r="2" />
-                      <circle cx="17" cy="8" r="2" />
-                      <circle cx="12" cy="12" r="2" />
-                      <path d="M4 18v-1a3 3 0 0 1 3-3" />
-                      <path d="M20 18v-1a3 3 0 0 0-3-3" />
-                      <path d="M8 20v-1a4 4 0 0 1 8 0v1" />
-                    </svg>
-                  )}
-                  {service.icon === 'chart' && (
-                    <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M4 20h16" />
-                      <path d="M7 16v-4" />
-                      <path d="M12 16V8" />
-                      <path d="M17 16v-6" />
-                      <path d="M6 10l6-4 6 3" />
-                    </svg>
-                  )}
-                  {service.icon === 'scales' && (
-                    <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M12 3v18" />
-                      <path d="M5 7h14" />
-                      <path d="M7 7l-3 6h6L7 7z" />
-                      <path d="M17 7l-3 6h6l-3-6z" />
-                      <path d="M8 21h8" />
-                    </svg>
-                  )}
-                </div>
-
-                <p class="text-base font-light leading-relaxed text-slate-600">{service.description}</p>
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
+    <div class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
+      {services.map((service, i) => (
+        <article data-reveal style={`--i:${i % 3}`} class:list={['group r flex flex-col justify-between gap-6 border p-6 transition-all duration-300 hover:-translate-y-1', i === 0 ? 'bg-accent text-on-accent border-transparent lg:col-span-4' : i === 3 ? 'bg-deep text-on-deep border-transparent lg:col-span-4' : 'bg-card border-line', i < 4 ? 'lg:col-span-2' : 'lg:col-span-3']}>
+          <p class:list={['tab-label', i === 0 ? 'opacity-80' : i === 3 ? 'text-hi' : 'text-accent-text']}>{service.tag}</p>
+          <div>
+            <h3 class="text-xl leading-snug">{service.title}</h3>
+            <p class:list={['mt-2 text-sm leading-relaxed', i === 0 ? 'opacity-90' : i === 3 ? 'text-deep-muted' : 'text-muted']}>{service.description}</p>
+          </div>
+        </article>
+      ))}
     </div>
+    <div class="mt-8"><a href={cta.href} class="btn btn-accent">{cta.label}</a></div>
   </div>
 </section>
