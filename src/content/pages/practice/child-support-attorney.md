@@ -23,7 +23,7 @@ Conversely if your income has decreased or you have lost your job through no fau
 
 Although a court order may require child support payments, reimbursement of medical expenses or payment of extracurricular activities by a specified date, this does not always mean payment will arrive on time.  If you are not receiving prompt payment, the Law Offices of Annette M. Fernholz,  can help you by seeking enforcement of the court order.  The failure to make timely payment may result in wage garnishment, suspension of driving privileges and under certain circumstances even incarceration for the non-paying parent.
 
-The Law Offices of Annette M. Fernholz can act on your behalf to enforce child support orders when a parent fails to make child support payments. Conversely, if you have lost your job or your income has decreased, you need to obtain a court order to allow you to reduce your child support obligation. Call 312-683-0308 or email to learn more.
+The Law Offices of Annette M. Fernholz can act on your behalf to enforce child support orders when a parent fails to make child support payments. Conversely, if you have lost your job or your income has decreased, you need to obtain a court order to allow you to reduce your child support obligation. [Connect with Annette online](/contact/) to learn more.
 
 [Lawyer Annette Fernholz](http://www.avvo.com/attorneys/60606-il-annette-fernholz-1074821.html?utm_campaign=avvo_rating&utm_content=1074821&utm_medium=avvo_badge&utm_source=avvo) | [Featured Attorney Child Support](http://www.avvo.com/child-support-lawyer/il/chicago.html?utm_campaign=avvo_rating&utm_content=1074821&utm_medium=avvo_badge&utm_source=avvo)
 

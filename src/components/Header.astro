@@ -1,28 +1,53 @@
 ---
-import { cta, firmName, navMenu } from '../data/site';
+import { cta, firmName, logo, navMenu, practiceGroups } from '../data/site';
 const mark = 'flex size-9 shrink-0 items-center justify-center rounded-xl bg-hi font-serif text-sm font-semibold text-on-hi';
 ---
 <header class="on-deep sticky top-0 z-50 px-3 pt-3 sm:px-5">
-  <div class="mx-auto flex h-14 max-w-[72rem] items-center justify-between gap-3 rounded-full border border-deep-line bg-deep/95 pl-2.5 pr-2 text-on-deep shadow-[0_10px_30px_-12px_rgb(0_0_0/0.5)] backdrop-blur">
+  <div class="relative mx-auto flex h-14 max-w-[72rem] items-center justify-between gap-3 rounded-full border border-deep-line bg-deep/95 pl-2.5 pr-2 text-on-deep shadow-[0_10px_30px_-12px_rgb(0_0_0/0.5)] backdrop-blur">
     <a href="/" class="flex min-w-0 items-center gap-2.5" aria-label={firmName}>
-      <span class={mark}>AMF</span>
-      <span class="truncate text-[0.8rem] font-semibold leading-tight sm:text-sm">{firmName}</span>
+      {logo ? (
+        <span class="flex h-10 items-center rounded-full bg-white px-3.5"><img src={logo} alt={firmName} width="120" height="40" class="h-8 w-auto" /></span>
+      ) : (
+        <>
+          <span class={mark}>AMF</span>
+          <span class="truncate text-[0.8rem] font-semibold leading-tight sm:text-sm">{firmName}</span>
+        </>
+      )}
     </a>
 
     <nav class="hidden items-center lg:flex" aria-label="Primary">
       {navMenu.map((item) => (
-        <div class="dd group relative">
+        <div class:list={["dd group", !item.mega && "relative"]}>
           <a href={item.href} class="flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium text-deep-muted transition-colors hover:bg-white/10 hover:text-on-deep group-focus-within:text-on-deep">
             {item.label}
             {item.children && (
               <svg class="size-3.5 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" /></svg>
             )}
           </a>
-          {item.children && (
+          {item.children && item.mega && (
+            <div class="invisible absolute inset-x-0 top-full z-50 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+              <div class="rounded-3xl border border-line bg-card p-6 text-fg shadow-[0_24px_50px_-12px_rgb(0_0_0/0.55)] ring-4 ring-hi/40">
+                <div class="grid grid-cols-4 gap-6">
+                  {practiceGroups.map((g) => (
+                    <div>
+                      <p class="tab-label mb-2 text-accent-text">{g.label}</p>
+                      <ul>
+                        {g.items.map((child) => (
+                          <li><a href={child.href} class="-mx-2.5 block rounded-xl px-2.5 py-2 text-sm font-medium text-fg transition-colors hover:bg-hi hover:text-on-hi">{child.label}</a></li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+                <a href={item.href} class="mt-4 inline-flex items-center gap-1 border-t border-line pt-4 text-sm font-semibold text-accent-text hover:underline">All practice areas <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          )}
+          {item.children && !item.mega && (
             <div class="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-              <ul class="rounded-2xl border border-deep-line bg-deep p-2 shadow-[0_24px_50px_-12px_rgb(0_0_0/0.6)]">
+              <ul class="rounded-2xl border border-line bg-card p-2 shadow-[0_24px_50px_-12px_rgb(0_0_0/0.55)] ring-4 ring-hi/40">
                 {item.children.map((child) => (
-                  <li><a href={child.href} class="block rounded-xl px-3 py-2 text-sm text-deep-muted transition-colors hover:bg-white/10 hover:text-on-deep">{child.label}</a></li>
+                  <li><a href={child.href} class="block rounded-xl px-3 py-2 text-sm font-medium text-fg transition-colors hover:bg-hi hover:text-on-hi">{child.label}</a></li>
                 ))}
               </ul>
             </div>

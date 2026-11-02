@@ -17,4 +17,4 @@ Now same-sex couples need legal representation concerning such issues as draftin
 
 ###  Chicago Attorney Protects Your Rights
 
-Annette Fernholz has counseled clients in same-sex divorce, adoption and other family law issues. Please call 312-683-0308 or email for a consultation.
+Annette Fernholz has counseled clients in same-sex divorce, adoption and other family law issues. [Connect with Annette online](/contact/) for a consultation.

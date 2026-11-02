@@ -19,4 +19,4 @@ When representing clients in a high net worth dissolution, you need an attorney 
 
 It is important when valuing a small business or professional practice to divide the value without destroying an income-generating business.  The Law Offices of Annette M. Fernholz, P.C. possesses the financial knowledge to handle sophisticated issues in a high net worth divorce and to work with a network of experts to ensure your case will be in a position to settle when feasible or prepared for trial, if necessary.
 
-Whenever a divorce involves marital business interests, obtaining an accurate and thorough valuation of the business is critical to successful resolution of the case.  Make sure your interests are strongly represented.  To learn more about valuation of assets in divorce, call 312-683-0308 or email to schedule a consultation.
+Whenever a divorce involves marital business interests, obtaining an accurate and thorough valuation of the business is critical to successful resolution of the case.  Make sure your interests are strongly represented.  To learn more about valuation of assets in divorce, [connect with Annette online](/contact/) to schedule a consultation.

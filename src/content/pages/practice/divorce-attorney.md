@@ -29,4 +29,4 @@ The law firm represents spouses seeking financial support and those obligated to
 
 Dividing marital property including the family residence, business property retirement accounts and all other assets and debts is completed after the property has been valued. At times experts are hired to assess the value of a property. For example, an actuary can determine the present value of a pension or a forensic accountant will determine the value of a business.
 
-To talk to an experienced lawyer about your divorce, contact the Law Offices of Annette M. Fernholz P.C. at 312-683-0308 or via e-mail for a consultation.
+To talk to an experienced lawyer about your divorce, contact the Law Offices of Annette M. Fernholz P.C. — [connect with Annette online](/contact/) for a consultation.

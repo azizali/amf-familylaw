@@ -1,26 +1,20 @@
 ---
+const GA_ID = import.meta.env.PUBLIC_GA_ID; // e.g. G-XXXXXXX, set in .env / Netlify
 ---
-<!-- 
-  Analytics Wrapper
-  Easily add your Google Analytics (G-XXXXXXX) and PostHog IDs here.
--->
+{GA_ID && (
+  <>
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
+    <script is:inline define:vars={{ GA_ID }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', GA_ID);
+    </script>
+  </>
+)}
 <script is:inline>
-  const GA_ID = ''; // e.g. G-XXXXXXX
   const POSTHOG_KEY = ''; // e.g. phc_XXXXXXX
   const POSTHOG_HOST = 'https://app.posthog.com';
-
-  // Google Analytics
-  if (GA_ID) {
-    let script = document.createElement('script');
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-    script.async = true;
-    document.head.appendChild(script);
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', GA_ID);
-  }
 
   // PostHog
   if (POSTHOG_KEY) {

@@ -29,4 +29,4 @@ Relocation impacts parenting allocation rights and parenting time (visitation) a
 
 ### Protecting Your Parental  Rights in Child Relocation Cases
 
-If you are trying to move to another state or prevent your child’s other parent from moving to another state, you need an experienced lawyer to explain the law to you. Protect your child’s interests, contact Law Offices of Annette M. Fernholz at (312) 683-0308 or send an e-mail to discuss your circumstances.
+If you are trying to move to another state or prevent your child’s other parent from moving to another state, you need an experienced lawyer to explain the law to you. Protect your child’s interests, contact Law Offices of Annette M. Fernholz — [connect with Annette online](/contact/) to discuss your circumstances.

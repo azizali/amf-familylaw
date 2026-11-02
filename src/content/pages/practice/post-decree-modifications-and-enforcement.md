@@ -28,4 +28,4 @@ An enforcement action may arise when an obligor is late paying support, when the
 
 ### Chicago Post-Judgment Attorney
 
-The Law Offices of Annette M. Fernholz, P.C.  provides realistic and reasonable legal counsel to individuals who have family law disputes. Call 312-683-0308 or send an email for a consultation today.
+The Law Offices of Annette M. Fernholz, P.C.  provides realistic and reasonable legal counsel to individuals who have family law disputes. [Connect with Annette online](/contact/) for a consultation today.

@@ -1,13 +1,12 @@
 ---
 import AddressMap from './AddressMap.astro';
-import { contact, firmLinks, firmName, offices, practiceLinks } from '../data/site';
+import { contact, cta, firmLinks, firmName, mapLinkHref, offices, practiceLinks } from '../data/site';
 ---
 <footer class="on-deep mt-6 bg-deep text-deep-muted">
   <div class="wrap grid gap-12 py-12 sm:grid-cols-2 lg:grid-cols-[1.1fr_1.1fr_0.9fr_1.4fr] lg:gap-10">
     <div>
-      <a href="/" class="flex items-center gap-3" aria-label={firmName}>
-        <span class="flex size-9 shrink-0 items-center justify-center rounded-xl bg-hi font-serif text-sm font-semibold text-on-hi">AMF</span>
-        <span class="text-sm font-semibold leading-tight text-on-deep">{firmName}</span>
+      <a href="/" class="inline-block rounded-xl bg-white px-4 py-3" aria-label={firmName}>
+        <img src="/logo-amffamilylaw.svg" alt={firmName} width="260" height="86" class="h-16 w-auto" />
       </a>
       <p class="mt-6 max-w-xs text-[0.95rem] leading-relaxed">
         Dedicated to bringing clarity, objectivity, and specialized expertise to your family law appeal.
@@ -34,13 +33,18 @@ import { contact, firmLinks, firmName, offices, practiceLinks } from '../data/si
 
     <div>
       <h4 class="tab-label text-hi">Contact</h4>
+      <a href={cta.href} class="btn btn-hi mt-5">{cta.short}</a>
       <address class="mt-5 flex flex-col text-[0.95rem] not-italic">
-        <a href={contact.phone.href} class="inline-block py-1 font-serif text-xl text-on-deep transition-colors hover:text-hi">{contact.phone.display}</a>
+        <a href={contact.phone.href} class="inline-block py-1 text-[0.95rem] transition-colors hover:text-on-deep">{contact.phone.display}</a>
         <a href={contact.mapsHref} class="mt-3 leading-relaxed transition-colors hover:text-on-deep">
           {contact.address.lines[0]}<br />
           {contact.address.lines[1]}
         </a>
         <AddressMap query={offices[0].query} embedSrc={offices[0].embedSrc} title={offices[0].name} class="mt-4 !border-deep-line" />
+        <a href={mapLinkHref(offices[1].query)} class="mt-4 leading-relaxed transition-colors hover:text-on-deep">
+          <span class="font-semibold text-on-deep">{offices[1].name}</span> ({offices[1].note.toLowerCase()})<br />
+          {offices[1].lines.join(', ')}
+        </a>
       </address>
     </div>
   </div>

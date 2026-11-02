@@ -25,6 +25,6 @@ These are a few of the factors a court will consider when dividing your property
 -   The custodial provisions for any children
 -   The reasonable opportunity of each spouse for future acquisition of capital assets and income
 
-As your Chicago divorce counsel, we will work with you to make sure your assets and liabilities are equitably divided.  If you have questions about how Law Offices of Annette M. Fernholz P.C. can assist you with your divorce, call 312-683-0308 for a consultation or send an email.
+As your Chicago divorce counsel, we will work with you to make sure your assets and liabilities are equitably divided.  If you have questions about how Law Offices of Annette M. Fernholz P.C. can assist you with your divorce, [connect with Annette online](/contact/) for a consultation.
 
 Read more about **[High Asset Divorce Lawyer in Chicago](/practice/divorce-attorney/high-asset-divorce-lawyer-in-chicago/ "High-Asset Divorce Lawyer")**

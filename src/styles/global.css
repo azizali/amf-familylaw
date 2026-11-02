@@ -166,3 +166,7 @@
   }
   .js-reveal [data-reveal].is-in { opacity: 1; transform: none; }
 }
+
+/* Attorney portrait in prose: show the whole photo at a modest size, floated beside the text on wide screens. */
+.prose-content img[src="/annette-fernholz.jpg"] { width: min(100%, 18rem); height: auto; max-height: none; aspect-ratio: 1; object-fit: cover; object-position: top; }
+@media (min-width: 640px) { .prose-content img[src="/annette-fernholz.jpg"] { float: right; margin: 0.25rem 0 1rem 1.75rem; } }

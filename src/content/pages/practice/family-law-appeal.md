@@ -23,7 +23,7 @@ The Law Offices of Annette M. Fernholz P.C. has represented its own clients and 
 
 ### Family Law Appellate Attorney
 
-Whether you are contemplating, initiating or responding to an appeal, contact Law Offices of Annette M. Fernholz, P.C. to understand the timeline for appeals and the issues you wish to appeal. Call 312-683-0308 or send an email for a consultation.
+Whether you are contemplating, initiating or responding to an appeal, contact Law Offices of Annette M. Fernholz, P.C. to understand the timeline for appeals and the issues you wish to appeal. [Connect with Annette online](/contact/) for a consultation.
 
 ## **Favorable Rulings in the Appellate Court**
 

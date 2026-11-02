@@ -1,3 +1,5 @@
+// Path under /public (e.g. '/logo-amffamilylaw.svg'). Leave null to show the AMF monogram.
+export const logo: string | null = null;
 export const firmName = 'Law Offices of Annette M. Fernholz, P.C.';
 
 export const contact = {
@@ -14,11 +16,11 @@ export const contact = {
 };
 
 // Primary call to action. Every "start a conversation" button on the site reads from here
-// and links to the new-client intake form.
+// and links to the Connect with Annette form (/contact/).
 export const cta = {
   label: 'Connect with Annette to discuss your appeal',
   short: 'Connect with Annette',
-  href: '/new-client/',
+  href: '/contact/',
 };
 
 export const practiceLinks = [
@@ -33,6 +35,15 @@ export const practiceLinks = [
   { label: 'Family Law Appeals', href: '/practice/family-law-appeal/' },
   { label: 'Post-Decree Modifications', href: '/practice/post-decree-modifications-and-enforcement/' },
   { label: 'Same-Sex Marriage & Civil Unions', href: '/chicago-same-sex-marriage-and-civil-union-attorney/' },
+];
+
+// Practice areas sorted into families for the header mega-menu. Labels and links come from practiceLinks.
+const byLabel = (label: string) => practiceLinks.find((l) => l.label === label)!;
+export const practiceGroups = [
+  { label: 'Divorce & Property', items: ['Divorce', 'Maintenance & Spousal Support', 'Prenuptial & Post-Nuptial Agreements', 'Same-Sex Marriage & Civil Unions'].map(byLabel) },
+  { label: 'Children & Family', items: ['Child Custody', 'Child Support', 'College Contribution'].map(byLabel) },
+  { label: 'Resolution Paths', items: ['Mediation', 'Collaborative Law'].map(byLabel) },
+  { label: 'Appeals & Post-Decree', items: ['Family Law Appeals', 'Post-Decree Modifications'].map(byLabel) },
 ];
 
 export const firmLinks = [
@@ -51,11 +62,10 @@ export const aboutLinks = [
 ];
 
 export const navMenu = [
-  { label: 'Practice Areas', href: '/practice/', children: practiceLinks },
+  { label: 'Practice Areas', href: '/practice/', children: practiceLinks, mega: true },
   { label: 'About', href: '/about/', children: aboutLinks },
   { label: 'FAQs', href: '/faqs/' },
   { label: 'Blog', href: '/blog/' },
-  { label: 'Contact', href: '/contact/' },
 ];
 
 // AI assistant. Flip `enabled` once the chatbot widget is embedded; every "Chat with our assistant"

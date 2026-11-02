@@ -17,4 +17,4 @@ Clients deserve to know their options and possible legal outcomes. We use a prac
 
 ### Contact an Skilled Lawyer Today
 
-If you have questions about your parental rights and parenting time, contact Law Offices of Annette M. Fernholz, P.C. at 312-683-0308 to discuss your parenting time.
+If you have questions about your parental rights and parenting time, contact Law Offices of Annette M. Fernholz, P.C. — [connect with Annette online](/contact/) to discuss your parenting time.

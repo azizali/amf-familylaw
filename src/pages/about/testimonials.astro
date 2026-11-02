@@ -1,0 +1,17 @@
+---
+import GoogleReviews from '../../components/GoogleReviews.astro';
+import Header from '../../components/Header.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import { firmName } from '../../data/site';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title={`Testimonials | ${firmName}`} description="Reviews and testimonials from clients of the Law Offices of Annette M. Fernholz, P.C.">
+	<Header />
+	<main id="main" class="wrap py-8 sm:py-10">
+		<PageHeader title="Testimonials" crumbs={[{ label: 'Home', href: '/' }, { label: 'About', href: '/about/' }, { label: 'Testimonials' }]} />
+		<div class="mt-6">
+			<GoogleReviews standalone />
+		</div>
+	</main>
+</Layout>

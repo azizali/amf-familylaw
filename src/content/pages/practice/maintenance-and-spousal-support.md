@@ -21,4 +21,4 @@ When spousal support is an issue in a divorce there are several factors that mus
 
 A judge will consider this list and other factors when determining if it will award spousal support, for what amount and for what duration.  Law Offices of Annette M. Fernholz, P.C. can develop a strategy to protect your interests if you need maintenance or are ordered to pay spousal support. We will advocate for you in establishing a fair, equitable and reasonable alimony schedule that takes into account the length of your marriage, the earning capacity of both spouses, the duration of the spousal obligation, and the tax consequences of the maintenance.
 
-Whether you desire spousal support or are attempting to limit your financial exposure to pay maintenance (alimony), contact Law Offices of Annette M. Fernholz, P.C. at 312-683-0308 or send an email to make an appointment.
+Whether you desire spousal support or are attempting to limit your financial exposure to pay maintenance (alimony), contact Law Offices of Annette M. Fernholz, P.C. — [connect with Annette online](/contact/) to make an appointment.

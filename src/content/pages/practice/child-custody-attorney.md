@@ -31,7 +31,7 @@ When a court determines which parent will be assigned the significant decision-m
 
 We help our clients establish parental custody and visitation judgments. Parents who can communicate and cooperate with each other may share joint custody of their child with one parent being named the primary residential parent and the other having visitation or parenting time. Law Offices of Annette M. Fernholz, P.C. will carefully explain your rights and responsibilities regarding custody and parenting time.
 
-When you need a zealous litigator, contact Law Offices of Annette M. Fernholz, P.C. to develop a strategy for your case. Call 312-683-0308 or send an email for a consultation.
+When you need a zealous litigator, contact Law Offices of Annette M. Fernholz, P.C. to develop a strategy for your case. [Connect with Annette online](/contact/) for a consultation.
 
 #### Read more about:
 

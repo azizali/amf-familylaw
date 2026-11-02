@@ -15,4 +15,4 @@ The Law Offices of Annette M. Fernholz, P.C. assists mothers who wish to establi
 
 At times the  parenting  and support issues can be mediated and resolved. On other occasions, the issues must be litigated. If the issues must be litigated, often an attorney is appointed for the children and the court may assign a mental health professional to conduct an assessment of the parties to determine the best interests of the children.
 
-The Chicago and Northbrook family law firm can answer your questions regarding parentage. Call Annette Fernholz at 312-683-0308 or send an email for a consultation.
+The Chicago and Northbrook family law firm can answer your questions regarding parentage. [Connect with Annette online](/contact/) for a consultation.

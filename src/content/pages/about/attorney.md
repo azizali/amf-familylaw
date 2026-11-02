@@ -9,7 +9,7 @@ modified: "2026-11-01T06:25:56"
 
 ### Chicago Family Law Attorney Skillfully Mediates, Collaborates and Litigates
 
-![Annette Fernholz photographed at Andrew Collings Photography studio, Chicago, IL. July 9, 2014. Photo by Andrew Collings.](../../../assets/legacy/1074821_1405443212.jpg)
+![Annette Fernholz, Chicago family law attorney](/annette-fernholz.jpg)
 
 Annette Fernholz concentrates her practice in the resolution of complex family law-related matters and family law appeals. She focuses her practice in the areas of paternity and divorcing couples, litigating parental responsibilities  and parenting  time issues (formerly custody and visitation), obtaining child support and spousal support, drafting prenuptial and post-nuptial agreements, negotiating settlements and drafting appellate briefs.
 

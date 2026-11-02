@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -6 520 172" role="img" aria-label="Law Offices of Annette M. Fernholz, A Professional Corporation">
+  <defs>
+    <linearGradient id="green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5fa591"/>
+      <stop offset="0.55" stop-color="#3d8a73"/>
+      <stop offset="1" stop-color="#2e6f5b"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#green)" font-family="'Baskerville','Times New Roman',Georgia,serif">
+    <text x="6" y="30" font-size="17" letter-spacing="1.5" textLength="188" lengthAdjust="spacing">LAW OFFICES OF</text>
+    <text x="196" y="58" font-size="46" font-style="italic" font-family="'Snell Roundhand','Apple Chancery','Brush Script MT','Palatino Linotype',Georgia,serif" textLength="290" lengthAdjust="spacingAndGlyphs">Annette M.</text>
+    <text x="4" y="120" font-size="86" textLength="492" lengthAdjust="spacingAndGlyphs">FERNHOLZ</text>
+    <text x="64" y="150" font-size="19" letter-spacing="2" textLength="372" lengthAdjust="spacing">A PROFESSIONAL CORPORATION</text>
+  </g>
+</svg>

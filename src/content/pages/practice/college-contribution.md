@@ -29,4 +29,4 @@ The Illinois Supreme Court has deemed college contribution to be in the nature o
 -   The financial resources of the child
 -   The child’s academic performance
 
-The Law Offices of Annette M. Fernholz can advise you on litigating the issue of college contribution for your children’s education. To schedule a consultation, contact the firm by calling (312) 683-0308 or send an email.
+The Law Offices of Annette M. Fernholz can advise you on litigating the issue of college contribution for your children’s education. To schedule a consultation, [connect with Annette online](/contact/).

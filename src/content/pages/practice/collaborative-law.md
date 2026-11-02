@@ -21,4 +21,4 @@ If you and your partner are capable of agreeing on major issues such as child-re
 
 ### Contact a Collaborative law Attorney Today
 
-Collaborative law attorney, Annette Fernholz has provided legal service to residents in Cook County, DuPage County, Lake County and Will County. Call Law Offices of Annette M. Fernholz, P.C. at 312-683-0308 or send an email to learn more about collaborative law.
+Collaborative law attorney, Annette Fernholz has provided legal service to residents in Cook County, DuPage County, Lake County and Will County. Contact Law Offices of Annette M. Fernholz, P.C. — [connect with Annette online](/contact/) to learn more about collaborative law.
